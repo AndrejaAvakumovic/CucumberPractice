@@ -18,4 +18,11 @@ public class VerificationStepDefinitions extends BasePage {
         String error = readText(By.xpath("//*[@id=\"center_column\"]/div[1]"));
         assertStringEquals(error,errorMessage);
     }
+
+    @Then("User is logged in")
+    public void userIsLoggedIn() {
+        String signOut = readText(By.className("logout"));
+        assertStringEquals(signOut,"Sign out");
+
+    }
 }
