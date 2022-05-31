@@ -3,7 +3,6 @@ package stepsDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.DriverUtils;
 

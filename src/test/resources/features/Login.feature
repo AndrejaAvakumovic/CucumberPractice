@@ -5,9 +5,9 @@ Feature: Login
     Given Open automation practice
     Given Navigate to Sign in page
 
-  Scenario: Validate user can't login with invalid credentials
-    When User enters "gregg.kassulke@yahoo.com" in email field
-    And User enters "m23nm3c0z30whf" in password field
+  Scenario: Validate user can login with valid credentials
+    When User enters "comtradeqa7@example.com" in email field
+    And User enters "12345" in password field
     And User clicks on sing in button
     Then User is logged in
     Then Close the browser
