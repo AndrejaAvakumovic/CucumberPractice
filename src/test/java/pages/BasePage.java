@@ -51,6 +51,8 @@ public class BasePage {
         Assert.assertEquals(expectedText,actualText);
     }
     public void clickUsingJavaScriptExecutor(By elementBy){
+        waitVisibility(elementBy);
+        waitClickability(elementBy);
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", driver.findElement(elementBy));
     }
