@@ -1,5 +1,6 @@
 package stepsDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
@@ -24,5 +25,22 @@ public class VerificationStepDefinitions extends BasePage {
         String signOut = readText(By.className("logout"));
         assertStringEquals(signOut,"Sign out");
 
+    }
+
+    @Then("User is logged out")
+    public void userIsLoggedOut() {
+        String signIn = readText(By.className("login"));
+        assertStringEquals(signIn,"Sign in");
+    }
+
+    @Then("Order is completed")
+    public void orderIsCompleted() {
+        String orderConfirmation = readText(By.cssSelector("#center_column > h1"));
+        assertStringEquals(orderConfirmation,"ORDER CONFIRMATION");
+    }
+
+    @And("User clicks on pay by bank wire at payment")
+    public void userClicksOnPayByBankWireAtPayment() {
+        clickUsingJavaScriptExecutor(By.cssSelector("#HOOK_PAYMENT > div:nth-child(1) > div > p > a"));
     }
 }
