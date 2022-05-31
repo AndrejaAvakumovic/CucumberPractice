@@ -51,7 +51,9 @@ public class ByeItemStepDefinitions extends BasePage {
 
     @And("User clicks on checkButton at shipping")
     public void userClicksOnCheckButtonAtShipping() {
-        clickUsingJavaScriptExecutor(By.cssSelector("#cgv"));
+        hover(By.cssSelector("#uniform-cgv"),driver);
+        click(By.cssSelector("#uniform-cgv"));
+//        clickUsingJavaScriptExecutor(By.cssSelector("#uniform-cgv"));
     }
 
     @And("User clicks on proceed to checkout button at shipping")
